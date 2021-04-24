@@ -1,9 +1,9 @@
 # Todo App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and [Tailwind Css](https://tailwindcss.com/)
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) ![blank page](https://github.com/stevelee2497/todo-app/blob/master/screenshots/react-icon.png?raw=true) and [Tailwind Css](https://tailwindcss.com/) ![blank page](https://github.com/stevelee2497/todo-app/blob/master/screenshots/tailwind.png?raw=true)
+
+Demo 🚀🚀🚀: https://stevelee2497.github.io/todo-app/
 
 ![blank page](https://github.com/stevelee2497/todo-app/blob/master/screenshots/sc_01.png?raw=true)
 
 ![blank page](https://github.com/stevelee2497/todo-app/blob/master/screenshots/sc_02.png?raw=true)
-
-Demo 🚀🚀🚀: https://stevelee2497.github.io/todo-app/
