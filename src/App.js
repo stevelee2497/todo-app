@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Task from "./components/Task";
 import note from "./assets/images/note.png";
 import lazycat from "./assets/images/lazycat.png";
@@ -7,15 +7,26 @@ function App() {
   const [tasks, setTasks] = useState([]);
   const [task, setTask] = useState("");
 
+  useEffect(() => {
+    const savedTasks = JSON.parse(localStorage.getItem("tasks"));
+    if (savedTasks && savedTasks.length) {
+      setTasks(savedTasks);
+    }
+  }, []);
+
   const handleAddTask = () => {
     if (task) {
-      setTasks([task, ...tasks]);
+      const updatedTasks = [task, ...tasks];
+      setTasks(updatedTasks);
       setTask("");
+      localStorage.setItem("tasks", JSON.stringify(updatedTasks));
     }
   };
 
   const removeTask = (index) => {
-    setTasks(tasks.filter((item, id) => index !== id));
+    const updatedTasks = tasks.filter((item, id) => index !== id);
+    setTasks(updatedTasks);
+    localStorage.setItem("tasks", JSON.stringify(updatedTasks));
   };
 
   return (
