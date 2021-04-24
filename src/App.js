@@ -1,5 +1,7 @@
 import { useState } from "react";
 import Task from "./components/Task";
+import note from "./assets/images/note.png";
+import lazycat from "./assets/images/lazycat.png";
 
 function App() {
   const [tasks, setTasks] = useState([]);
@@ -19,7 +21,7 @@ function App() {
   return (
     <div className="flex h-screen text-white">
       <div className="w-2/5 bg-gradient-to-b from-purple-500 to-purple-700 flex flex-col">
-        <img src="assets/note.png" alt="" className="max-w-2xl max-h-2xl" />
+        <img src={note} alt="" className="max-w-2xl max-h-2xl" />
         <div className="flex flex-col p-6 flex-1 justify-between">
           <div className="flex flex-col">
             <h1 className="text-5xl my-4">Todo App</h1>
@@ -49,7 +51,7 @@ function App() {
           </div>
         ) : (
           <div className="flex flex-col items-center">
-            <img alt="" src="assets/lazycat.png" className="mt-12" />
+            <img alt="" src={lazycat} className="mt-12" />
             <h1 className="text-2xl my-4">Your day is currently empty</h1>
             <h2>Let's fulfill it ;)</h2>
           </div>
