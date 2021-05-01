@@ -30,8 +30,8 @@ function App() {
   };
 
   return (
-    <div className="flex h-screen text-white">
-      <div className="w-2/5 bg-gradient-to-b from-purple-500 to-purple-700 flex flex-col">
+    <div className="flex flex-col md:flex-row h-screen text-white">
+      <div className="md:w-2/5 bg-gradient-to-b from-purple-500 to-purple-700 flex flex-col">
         <img src={note} alt="" className="max-w-2xl max-h-2xl" />
         <div className="flex flex-col p-6 flex-1 justify-between">
           <div className="flex flex-col">
@@ -50,10 +50,10 @@ function App() {
               Add Task
             </button>
           </div>
-          <p>From @steven with love 💛</p>
+          <p className="mt-6">From @steven with love 💛</p>
         </div>
       </div>
-      <div className="w-3/5 bg-gradient-to-b from-pink-500 to-pink-600 flex flex-col pt-8">
+      <div className="md:w-3/5 bg-gradient-to-b from-pink-500 to-pink-600 flex flex-col pt-8 pb-20 px-10">
         {tasks.length ? (
           <div className="flex flex-col overflow-y-auto pb-6">
             {tasks.map((item, index) => (
